@@ -1,0 +1,1587 @@
+
+
+
+<!DOCTYPE html>
+<!--IR LAYOUT-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"NRJS-90435e115ada12916ae","applicationID":"468898334","transactionName":"M1MHZEVYDEVYUkdRXwoZKGZ0FjFfTVRQV0IBdQpeQ0sNWlVUQRd5ClIASA==","queueTime":0,"applicationTime":59,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false},ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"Vg8EVFNRDhAEUllaDgkEVVA=",licenseKey:"NRJS-90435e115ada12916ae",applicationID:"468898334"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(27),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(28),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(28),a=t(27);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(24),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(27),s=t(28),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(26),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(t)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],25:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(27),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(22),s=t("handle"),c=t(27),f=t("ee"),u=t(25),d=t(17),l=t(19),p=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(23),m[v]?(m[v]("DOMContentLoaded",o,l(!1)),h[v]("load",r,l(!1))):(m[w]("onreadystatechange",i),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(28),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+    <meta name="theme-color" content="#115860" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:image" content="https://www.ird.govt.nz/assets/home/images/social-favicon.png">
+
+    <link rel="canonical"  href="http://www.ird.govt.nz/">
+    <!-- For Chrome for Android: -->
+    <link rel="icon" sizes="180x180" href="/assets/home/images/apple-touch-icon-180x180-precomposed.png">
+    <!-- For iPhone 6 Plus with 3× display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/assets/home/images/apple-touch-icon-180x180-precomposed.png">
+    <!-- For iPad with 2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/home/images/apple-touch-icon-152x152-precomposed.png">
+    <!-- For iPad with 2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/home/images/apple-touch-icon-144x144-precomposed.png">
+    <!-- For iPhone with 2× display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/home/images/apple-touch-icon-120x120-precomposed.png">
+    <!-- For iPhone with 2× display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/home/images/apple-touch-icon-114x114-precomposed.png">
+    <!-- For the iPad mini and the first- and second-generation iPad (1× display) on iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/home/images/apple-touch-icon-76x76-precomposed.png">
+    <!-- For the iPad mini and the first- and second-generation iPad (1× display) on iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/home/images/apple-touch-icon-72x72-precomposed.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/home/images/apple-touch-icon-precomposed.png"><!-- 57×57px -->
+    <link rel="stylesheet" href="https://use.typekit.net/kgv5gkd.css" />
+    <style>
+        @import url("https://static.cloud.coveo.com/searchui/v2.10109/css/CoveoFullSearch.min.css") layer(coveo);
+
+        @layer coveo, legacy, rebase;
+    </style>
+
+    <link rel="stylesheet" href="/assets/home/css/main.css?v=0.1906.0-sc10release&cms=130.2" />
+    <script class="coveo-script" src="https://static.cloud.coveo.com/searchui/v2.10109/0/js/CoveoJsSearch.Lazy.min.js" integrity="sha512-6oqgQSftG9tVIfn6VNtPpIkRWcx/T3C9zyWRwNzoB2kbA72AKQIV4OuqgkocvmZARAAGHOH4dn+MjPL9SC6agg==" crossorigin="anonymous"></script>
+
+    
+    
+
+
+    
+
+
+
+    <title>Inland Revenue - Te Tari Taake</title>
+
+
+
+
+    <link href="/-/media/themes/ir/shared/favicon.png?modified=20210228002011" rel="shortcut icon" />
+
+
+
+
+<meta property="og:title"  content="Inland Revenue - Te Tari Taake"><meta property="og:url"  content="https://www.ird.govt.nz/">
+
+
+
+<meta  name="description" content="Kia ora haere mai, welcome to the New Zealand Inland Revenue website. We collect most of the revenue that the New Zealand government needs to fund its programmes. We also administer a number of social support programmes including Child Support, Working For Families Tax Credits, and Best Start."><meta  name="keywords" content="IRD, IR, Inland Revenue Department, Tax, taxation, income, income tax, revenue, business, employers, individuals, families, non-residents, non resident, visitors, not for profit groups, not-for-proft, non-profit, charity, charities, social policy">
+
+
+
+<meta property="twitter:title"  content="Inland Revenue - Te Tari Taake"><meta property="twitter:card"  content="summary_large_image">
+
+        <!-- Google Tag Manager -->
+<script>
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || []; w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    }); var f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                            'https://www.googletagmanager.com/gtm.js?id=' + i + dl ; f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-58F6MRW');</script>
+
+    <script type="text/javascript">
+        window.TAX_COVEO_CONFIG = {
+            originContext: "PublicSite-Search",
+            noResults: "<p>We couldn't find any results matching your search term</p><p>Search tips</p><ul><li>Check the spelling of your search and try again</li><li>Try a similar search term, like business instead of company</li><li>Keep your search term simple. Our search works best with shorter descriptions</li><li>Use the options to filter your results or try one of our index pages.</li></ul>",
+            searchPageEndpoint: "/search",
+            externalLinks: {
+                taxPolicySearchPage: "https://taxpolicy.ird.govt.nz/search#q=",
+                taxTechnicalSearchPage: "https://www.taxtechnical.ird.govt.nz/search#q=",
+            },
+            mediaSearchPageEndpoint:"/index/media-releases",
+            token: "eyJhbGciOiJIUzI1NiJ9.eyJzZWFyY2hIdWIiOiJDb3JlLVNlYXJjaCIsInY4Ijp0cnVlLCJ0b2tlbklkIjoidXZ6Z3prYTNjam0zeWM2YmJsamtud2Nlb2EiLCJvcmdhbml6YXRpb24iOiJuZXd6ZWFsYW5kaW5sYW5kcmV2ZW51ZXByb2QzNW0xazZlcyIsInVzZXJJZHMiOlt7InR5cGUiOiJVc2VyIiwibmFtZSI6ImFub255bW91cyIsInByb3ZpZGVyIjoiRW1haWwgU2VjdXJpdHkgUHJvdmlkZXIifV0sInJvbGVzIjpbInF1ZXJ5RXhlY3V0b3IiXSwiaXNzIjoiU2VhcmNoQXBpIiwiZXhwIjoxNzE5OTAzMDM1LCJpYXQiOjE3MTk4OTk0MzV9.GLs14Lg7VJgJgW3p5BUX_hC7n-wKH-C953vS1J-vOO4",
+            organisation: "newzealandinlandrevenueprod35m1k6es",
+            searchHub: "Core-Search"
+        };
+    </script>
+</head>
+<body class="homepage content-wide default-device bodyclass" id="top" data-enable-history="true"
+      data-server-date="Tue, 02 Jul 2024 06:04:36 GMT"
+      data-template="IR Home V1">
+            <!-- Google Tag Manager (noscript)-->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58F6MRW"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+
+            <!-- BEGIN NOINDEX -->
+        <a id="skip-main" href="#main-content-wrapper">Skip to main content</a>
+
+
+
+<!--Start Alert-->
+<!--End Alert-->
+<!--Start Topic Alert-->
+<!--End Topic Alert--><!--Start Header-->
+    <header class="global-header header-refresh">
+        <div class="component plain-html">
+            <div>
+                <div class="header-refresh__container">
+                    <div class="header-refresh__logo-container">
+                        <a class="ird-logo" href="/">
+                            <img alt="Inland Revenue" src="/-/media/themes/ir/home/ir-theme/images/logo-landscape.svg?la=en&amp;hash=B1C4664A92B15C4D673718A969E620EC" class="ird-logo__image" id="logo" />
+                            <img alt="Inland Revenue" src="/-/media/themes/ir/home/ir-theme/images/logo-landscape-black.png" class="ird-logo__image ird-logo__image--print" id="logo-print" />
+                        </a>
+                    </div>
+                    <nav class="header-refresh__nav"
+                         id="header-nav"
+                         aria-labelledby="utilities-nav-title">
+                        <h2 class="visually-hidden" id="utilities-nav-title">Utilities</h2>
+                            <ul>
+                                
+                    <li>
+                                    <a aria-expanded="false" role="button" class="dropdown-link header-refresh__nav-item" tabindex="0" data-menu-id=header-news-menu-1>
+                <span class="dropdown-link__label">About us</span>
+            </a>
+            <ul id=header-news-menu-1 class="dropdown-nav">
+
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/about-us">About us</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/about-us/careers">IR careers</a>
+                    </li>
+            </ul>
+
+                    </li>
+                    <li>
+                                    <a aria-expanded="false" role="button" class="dropdown-link header-refresh__nav-item" tabindex="0" data-menu-id=header-news-menu-2>
+                <span class="dropdown-link__label">News</span>
+            </a>
+            <ul id=header-news-menu-2 class="dropdown-nav">
+
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/media-releases">Media releases</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/index/news">Updates</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/subscription-service">Subscribe</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/index/events">Seminars</a>
+                    </li>
+            </ul>
+
+                    </li>
+                    <li>
+                                    <a aria-expanded="false" role="button" class="dropdown-link header-refresh__nav-item" tabindex="0" data-menu-id=header-news-menu-3>
+                <span class="dropdown-link__label">Related Websites</span>
+            </a>
+            <ul id=header-news-menu-3 class="dropdown-nav">
+
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link external" rel="noopener noreferrer" target="_blank" href="https://www.taxtechnical.ird.govt.nz">Tax Technical</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link external" rel="noopener noreferrer" target="_blank" href="http://taxpolicy.ird.govt.nz/">Tax Policy</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/international-tax">International</a>
+                    </li>
+            </ul>
+
+                    </li>
+                    <li>
+                                    <a aria-expanded="false" role="button" class="dropdown-link header-refresh__nav-item" tabindex="0" data-menu-id=header-news-menu-4>
+                <span class="dropdown-link__label">Contact us</span>
+            </a>
+            <ul id=header-news-menu-4 class="dropdown-nav">
+
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/contactus">Contact us</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/media-releases/media">Media queries</a>
+                    </li>
+            </ul>
+
+                    </li>
+                        <li>
+                            <a class="language-select__trigger" href="#">
+                                <i class="language-select__trigger__icon far fa-globe" aria-hidden="true"></i>
+                                <span class="language-select__trigger__label">English</span>
+                            </a>
+                        </li>
+
+
+
+                            </ul>
+                    </nav>
+                    <div class="header-refresh__profile-container">
+<a href="https://myir.ird.govt.nz/tools/?LINK=NEWLOGUNA" class="btn btn-black header-refresh__register header-refresh__profile-btn" >Register</a>                        <a href="https://myir.ird.govt.nz/clearsession" class="my-ir btn btn-green myir-popup__desktop-trigger header-refresh__desktop-login header-refresh__profile-btn" >                                <i class="fal fa-lock-alt"></i>
+myIR login</a>                    </div>
+                    <div class="header-refresh__profile-container--mobile">
+<a href="https://myir.ird.govt.nz/clearsession" class="btn btn-green  header-refresh__mobile-login header-refresh__profile-btn" >                                <i class="fal fa-lock-alt"></i>
+myIR login</a>                        <button class="header-refresh__myir-popup-notification js-myir-popup-mobile-trigger-refresh header-refresh__profile-btn btn btn-green hide-notification" aria-label="Open notifications">
+                            <i class="far fa-bell"></i>
+                        </button>
+                    </div>
+                    <!--End Header-->
+
+                    <button class="header-refresh__hamburger" id="header-nav-toggle">
+                        <span class="sr-only">Toggle mobile nav</span>
+                        <i class="header-refresh__hamburger-icon header-refresh__hamburger-icon--bars far fa-bars"></i>
+                        <i class="header-refresh__hamburger-icon header-refresh__hamburger-icon--times far fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--Mega Menu Extension-->
+            <nav class="megamenu-mobile" aria-labelledby="mobile-nav-title">
+        <h2 class="visually-hidden" id="mobile-nav-title">Main Menu</h2>
+        <div class="container">
+            <div class="row">
+                            <div class="col-xs-12 menu-tab">
+                                <button type="button" class="first-level parent" aria-expanded="false" aria-controls="megamenu-dropdown-primary-1">
+                                    <span>Individuals and families</span>
+                                    <span class="tereo" aria-hidden="true" lang="mi">Ngā tāngata me ngā whānau</span>
+                                </button>
+                                <ul class="dropdown" id="megamenu-dropdown-secondary-1">
+                                                    <li>
+<a href="/managing-my-tax/ird-numbers/ird-numbers-for-individuals" class="second-level" target="_self" rel="" >                                                            <span>IRD numbers</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā tau IRD</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/income-tax/income-tax-for-individuals" class="second-level" target="_self" rel="" >                                                            <span>Income tax for individuals</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tāke moni whiwhi mō ngā tāngata takitahi</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/income-tax/income-tax-for-individuals/what-happens-at-the-end-of-the-tax-year/individual-income-tax-return---ir3/complete-my-individual-income-tax-return---ir3" class="second-level" target="_self" rel="" >                                                            <span>File my individual tax return</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tuku i tētahi puka tāke takitahi</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/support-for-families" class="second-level" target="_self" rel="" >                                                            <span>Support for families</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā tautoko i ngā whānau</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/kiwisaver" class="second-level" target="_self" rel="" >                                                            <span>KiwiSaver</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Poua he Oranga</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/student-loans" class="second-level" target="_self" rel="" >                                                            <span>Student loans</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Student loans</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/roles/self-employed" class="second-level" target="_self" rel="" >                                                            <span>Self-employed</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Mahi ā-kiri</span>
+</a>                                                    </li>
+                                    <li>
+                                        <a href="/individuals-and-families" class="second-level">
+                                            <span>More...</span>
+                                            <span class="tereo" aria-hidden="true">Tāpiri atu…</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 menu-tab">
+                                <button type="button" class="first-level parent" aria-expanded="false" aria-controls="megamenu-dropdown-primary-2">
+                                    <span>Business and organisations</span>
+                                    <span class="tereo" aria-hidden="true" lang="mi">Ngā pakihi me ngā whakahaere</span>
+                                </button>
+                                <ul class="dropdown" id="megamenu-dropdown-secondary-2">
+                                                    <li>
+<a href="/income-tax/income-tax-for-businesses-and-organisations" class="second-level" target="_self" rel="" >                                                            <span>Income tax</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Tāke moni whiwhi mō ngā pakihi</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/employing-staff" class="second-level" target="_self" rel="" >                                                            <span>Employing staff</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tuku mahi ki ngā kaimahi</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/kiwisaver/kiwisaver-employers" class="second-level" target="_self" rel="" >                                                            <span>KiwiSaver for employers</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te KiwiSaver mō ngā kaituku mahi</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/gst" class="second-level" target="_self" rel="" >                                                            <span>Goods and services tax (GST)</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Tāke mō ngā rawa me ngā ratonga</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/roles/not-for-profits-and-charities" class="second-level" target="_self" rel="" >                                                            <span>Non-profits and charities</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā umanga kore-huamoni me ngā umanga aroha</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/international-tax" class="second-level" target="_self" rel="" >                                                            <span>International</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Tāwāhi</span>
+</a>                                                    </li>
+                                    <li>
+                                        <a href="/business-and-organisations" class="second-level">
+                                            <span>More...</span>
+                                            <span class="tereo" aria-hidden="true">Tāpiri atu…</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 menu-tab">
+                                <button type="button" class="first-level parent" aria-expanded="false" aria-controls="megamenu-dropdown-primary-3">
+                                    <span>Intermediaries and others</span>
+                                    <span class="tereo" aria-hidden="true" lang="mi">Ngā takawaenga me ētahi atu</span>
+                                </button>
+                                <ul class="dropdown" id="megamenu-dropdown-secondary-3">
+                                                    <li>
+<a href="/roles/tax-agents" class="second-level" target="_self" rel="" >                                                            <span>Tax agents</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā māngai tāke</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/roles/bookkeepers" class="second-level" target="_self" rel="" >                                                            <span>Bookkeepers</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te kaikaute</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/roles/paye-intermediaries" class="second-level" target="_self" rel="" >                                                            <span>PAYE intermediaries</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā takawaenga PAYE</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/roles/payroll-bureaus" class="second-level" target="_self" rel="" >                                                            <span>Payroll bureaus</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā tari utu ā-rārangi</span>
+</a>                                                    </li>
+                                                    <li>
+<a href="/digital-service-providers" class="second-level" target="_self" rel="" >                                                            <span>Digital service providers</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā kaiwhakarato pūmanawa rorohiko</span>
+</a>                                                    </li>
+                                    <li>
+                                        <a href="/intermediaries-and-others" class="second-level">
+                                            <span>More...</span>
+                                            <span class="tereo" aria-hidden="true">Tāpiri atu…</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+        <div class="col-xs-12 menu-tab dropdown-link--mobile">
+            <a href="#" class="first-level parent">
+                <span>About us</span>
+
+            </a>
+
+                <ul class="dropdown">
+                            <li>
+<a href="/about-us" class="second-level" target="_self" rel="" >                                    <span>About us</span>
+</a>                            </li>
+                            <li>
+<a href="/about-us/careers" class="second-level" target="_self" rel="" >                                    <span>IR careers</span>
+</a>                            </li>
+                </ul>
+
+        </div>
+        <div class="col-xs-12 menu-tab dropdown-link--mobile">
+            <a href="#" class="first-level parent">
+                <span>News</span>
+
+            </a>
+
+                <ul class="dropdown">
+                            <li>
+<a href="/media-releases" class="second-level" target="_self" rel="" >                                    <span>Media releases</span>
+</a>                            </li>
+                            <li>
+<a href="/index/news" class="second-level" target="_self" rel="" >                                    <span>Updates</span>
+</a>                            </li>
+                            <li>
+<a href="/subscription-service" class="second-level" target="_self" rel="" >                                    <span>Subscribe</span>
+</a>                            </li>
+                            <li>
+<a href="/index/events" class="second-level" target="_self" rel="" >                                    <span>Seminars</span>
+</a>                            </li>
+                </ul>
+
+        </div>
+        <div class="col-xs-12 menu-tab dropdown-link--mobile">
+            <a href="#" class="first-level parent">
+                <span>Related Websites</span>
+
+            </a>
+
+                <ul class="dropdown">
+                            <li>
+<a href="https://www.taxtechnical.ird.govt.nz" class="second-level external" target="_blank" rel="noopener noreferrer" >                                    <span>Tax Technical</span>
+</a>                            </li>
+                            <li>
+<a href="http://taxpolicy.ird.govt.nz/" class="second-level external" target="_blank" rel="noopener noreferrer" >                                    <span>Tax Policy</span>
+</a>                            </li>
+                            <li>
+<a href="/international-tax" class="second-level" target="_self" rel="" >                                    <span>International</span>
+</a>                            </li>
+                </ul>
+
+        </div>
+        <div class="col-xs-12 menu-tab dropdown-link--mobile">
+            <a href="#" class="first-level parent">
+                <span>Contact us</span>
+
+            </a>
+
+                <ul class="dropdown">
+                            <li>
+<a href="/contactus" class="second-level" target="_self" rel="" >                                    <span>Contact us</span>
+</a>                            </li>
+                            <li>
+<a href="/media-releases/media" class="second-level" target="_self" rel="" >                                    <span>Media queries</span>
+</a>                            </li>
+                </ul>
+
+        </div>
+                    <div class="col-xs-12 menu-tab">
+                        <a class="first-level language-select__trigger" href="#">
+                            <i class="language-select__trigger__icon far fa-globe" aria-hidden="true"></i>
+                            <span class="language-select__trigger__label">English</span>
+                        </a>
+                    </div>
+
+                                    <div class="col-xs-12 mobile-menu-footer">
+                        <div class="col-xs-6">
+<a href="https://myir.ird.govt.nz/tools/?LINK=NEWLOGUNA" class="btn btn-white" >Register</a>                        </div>
+                        <div class="col-xs-6">
+<a href="https://myir.ird.govt.nz/clearsession" class="btn-green btn" >                                    <i class="fal fa-lock-alt"></i>
+myIR login</a>                        </div>
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <nav class="megamenu-latest js-megamenu megamenu-latest--header-refresh"
+         arialabelledby="main-nav-title">
+        <h2 class="visually-hidden" id="main-nav-title">Main Menu</h2>
+        <div class="header-refresh__container">
+            <div class="navbar">
+                <div class="home menu-tab megamenu-item">
+                    <a class="first-level megamenu-home-link" href="/" aria-expanded="false">
+                        <div class="menu-item">
+                            <img alt="Inland Revenue" id="home" src="/-/media/themes/ir/home/ir-theme/images/home.svg?modified=20210721071728&amp;modified=20210721071728">
+                        </div>
+                        <span class="home">Home</span>
+                    </a>
+                </div>
+                <div class="mega-menu-sub-items">
+                            <div class="megamenu-item col-xs-12 col-sm-4 col-md-4  menu-tab" data-index="0">
+                                <button type="button" class="megamenu-first-level" aria-expanded="false">
+                                    <div class="menu-item">
+                                        <span>Individuals and families</span>
+                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā tāngata me ngā whānau</span>
+                                    </div>
+                                </button>
+                            </div>
+                                <div class="megamenu-sub-menu-content mega-menu-subitems-root-0" data-index="0">
+                                    <div class="row">
+
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 ">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Popular pages</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā wharangi rongonui</span>
+                                                    </div>
+                                                        <a href="/maori" aria-label="Māori">
+                                                            <span>Māori</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                        <a href="/managing-my-tax/ird-numbers" aria-label="IRD numbers">
+                                                            <span>IRD numbers</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā tau IRD</span>
+                                                        </a>
+                                                        <a href="/income-tax/income-tax-for-individuals/what-happens-at-the-end-of-the-tax-year/individual-income-tax-return---ir3/complete-my-individual-income-tax-return---ir3" aria-label="File my individual tax return">
+                                                            <span>File my individual tax return</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tuku i tētahi puka tāke takitahi</span>
+                                                        </a>
+                                                        <a href="/support-for-families" aria-label="Support for families">
+                                                            <span>Support for families</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā tautoko i ngā whānau</span>
+                                                        </a>
+                                                        <a href="/managing-my-tax" aria-label="Managing my tax">
+                                                            <span>Managing my tax</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te whakahaere i taku tāke</span>
+                                                        </a>
+                                                </section>
+                                                                                                    <div class="more-link-border">
+                                                        <a href="/individuals-and-families" class="more-link" aria-label="More individuals and families">More individuals and families <i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+
+                                            </div>
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 ">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Families</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā whānau</span>
+                                                    </div>
+                                                        <a href="/working-for-families" aria-label="Working for Families">
+                                                            <span>Working for Families</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Working for families</span>
+                                                        </a>
+                                                        <a href="/child-support" aria-label="Child support">
+                                                            <span>Child support</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tautoko tamariki</span>
+                                                        </a>
+                                                        <a href="/familyboost" aria-label="FamilyBoost">
+                                                            <span>FamilyBoost</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                        <a href="/paid-parental-leave" aria-label="Paid parental leave">
+                                                            <span>Paid parental leave</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te utu tiaki pēpi</span>
+                                                        </a>
+                                                </section>
+                                                        <section tabindex="-1" class="content">
+                                                            <div class="sub-menu-heading">
+                                                                <span>Property and Trusts </span>
+                                                                <span class="tereo" aria-hidden="true" lang="mi">Ngā wharangi rongonui</span>
+                                                            </div>
+                                                                <a href="/roles/trusts-and-estates" aria-label="Trusts and estates">
+                                                                    <span>Trusts and estates</span>
+                                                                    <span class="tereo" aria-hidden="true" lang="mi">Ngā rōpū kaitiaki me ngā rawa tuku iho</span>
+                                                                </a>
+                                                                <a href="/property" aria-label="Property">
+                                                                    <span>Property</span>
+                                                                    <span class="tereo" aria-hidden="true" lang="mi">Ngā rawa</span>
+                                                                </a>
+                                                        </section>
+                                                
+                                            </div>
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 ">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Individuals</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā tāngata</span>
+                                                    </div>
+                                                        <a href="/income-tax/income-tax-for-individuals" aria-label="Income tax for individuals">
+                                                            <span>Income tax for individuals</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tāke moni whiwhi mō ngā tāngata takitahi</span>
+                                                        </a>
+                                                        <a href="/roles/non-residents" aria-label="Non-residents">
+                                                            <span>Non-residents</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā kainoho-tāwāhi</span>
+                                                        </a>
+                                                        <a href="/roles/self-employed" aria-label="Self-employed">
+                                                            <span>Self-employed</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Mahi ā-kiri</span>
+                                                        </a>
+                                                        <a href="/kiwisaver/kiwisaver-individuals" aria-label="Kiwisaver for individuals">
+                                                            <span>Kiwisaver for individuals</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Kiwisaver mā te tangata takitahi</span>
+                                                        </a>
+                                                        <a href="/student-loans" aria-label="Student loans">
+                                                            <span>Student loans</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā pūtea taurewa ākonga</span>
+                                                        </a>
+                                                        <a href="/cryptoassets/individual" aria-label="Cryptoassets for individuals">
+                                                            <span>Cryptoassets for individuals</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā rawa whiti-rangi mā te tangata takitahi</span>
+                                                        </a>
+                                                        <a href="/unclaimedmoney" aria-label="Unclaimed money">
+                                                            <span>Unclaimed money</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                </section>
+                                                
+                                            </div>
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 col-bg-sub-menu">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Situations</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā āhuatanga</span>
+                                                    </div>
+                                                        <a href="/situations/i-am-going-overseas" aria-label="I am going overseas">
+                                                            <span>I am going overseas</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Kei te haere ahau ki tāwāhi</span>
+                                                        </a>
+                                                        <a href="/situations/i-received-an-income-tax-assessment" aria-label="I received an income tax assessment">
+                                                            <span>I received an income tax assessment</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">I whiwhi i ahau tētahi aromatawai tāke moni whiwhi</span>
+                                                        </a>
+                                                        <a href="/situations/unable-to-pay-my-tax-debt" aria-label="I&#39;m struggling to file and pay my tax">
+                                                            <span>I&#39;m struggling to file and pay my tax</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                </section>
+                                                                                                    <div class="more-link-border">
+                                                        <a href="/situations" class="more-link" aria-label="More situations">More situations <i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+
+                                            </div>
+
+                                    </div>
+                                </div>
+                            <div class="megamenu-item col-xs-12 col-sm-4 col-md-4  menu-tab" data-index="1">
+                                <button type="button" class="megamenu-first-level" aria-expanded="false">
+                                    <div class="menu-item">
+                                        <span>Business and organisations</span>
+                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā pakihi me ngā whakahaere</span>
+                                    </div>
+                                </button>
+                            </div>
+                                <div class="megamenu-sub-menu-content mega-menu-subitems-root-1" data-index="1">
+                                    <div class="row">
+
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 ">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Popular pages</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā wharangi rongonui</span>
+                                                    </div>
+                                                        <a href="/covid-19" aria-label="Covid-19 Businesses and organisations">
+                                                            <span>Covid-19 Businesses and organisations</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">KOWHEORI-19 Ngā pakihi me ngā whakahaere</span>
+                                                        </a>
+                                                        <a href="/income-tax/income-tax-for-businesses-and-organisations/income-tax-for-companies/file-a-companies-income-tax-return-ir4" aria-label="File a companies income tax return - IR4">
+                                                            <span>File a companies income tax return - IR4</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tuku i tētahi puka tāke moni whiwhi kamupene - IR4</span>
+                                                        </a>
+                                                        <a href="/maori" aria-label="Māori">
+                                                            <span>Māori</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                        <a href="/roles/not-for-profits-and-charities" aria-label="Not-for-profits and charities">
+                                                            <span>Not-for-profits and charities</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                        <a href="/employing-staff/deductions-from-income/deductions-from-salary-and-wages/work-out-paye-deductions-from-salary-or-wages" aria-label="PAYE calculator to work out salary and wage deductions">
+                                                            <span>PAYE calculator to work out salary and wage deductions</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                        <a href="/property" aria-label="Property">
+                                                            <span>Property</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā rawa</span>
+                                                        </a>
+                                                        <a href="/managing-my-tax/ird-numbers" aria-label="IRD numbers">
+                                                            <span>IRD numbers</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā tau IRD</span>
+                                                        </a>
+                                                </section>
+                                                                                                    <div class="more-link-border">
+                                                        <a href="/business-and-organisations" class="more-link" aria-label="More business and organisations">More business and organisations <i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+
+                                            </div>
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 ">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Income tax</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Te tāke moni whiwhi</span>
+                                                    </div>
+                                                        <a href="/income-tax/income-tax-for-businesses-and-organisations/types-of-business-income" aria-label="Types of business income">
+                                                            <span>Types of business income</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā momo moni whiwhi pakihi</span>
+                                                        </a>
+                                                        <a href="/income-tax/income-tax-for-businesses-and-organisations/tax-rates-for-businesses" aria-label="Tax rates for businesses">
+                                                            <span>Tax rates for businesses</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā pāpātanga tāke mō te pakihi</span>
+                                                        </a>
+                                                        <a href="/income-tax/income-tax-for-businesses-and-organisations/balance-dates" aria-label="Balance dates">
+                                                            <span>Balance dates</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā rā mutunga tau pūtea</span>
+                                                        </a>
+                                                </section>
+                                                        <section tabindex="-1" class="content">
+                                                            <div class="sub-menu-heading">
+                                                                <span>GST</span>
+                                                                <span class="tereo" aria-hidden="true" lang="mi">Tāke hokohoko (GST)</span>
+                                                            </div>
+                                                                <a href="/gst/charging-gst" aria-label="Charging GST">
+                                                                    <span>Charging GST</span>
+                                                                    <span class="tereo" aria-hidden="true" lang="mi">Te uta i te tāke hokohoko</span>
+                                                                </a>
+                                                                <a href="/gst/claiming-gst" aria-label="Claiming GST">
+                                                                    <span>Claiming GST</span>
+                                                                    <span class="tereo" aria-hidden="true" lang="mi">Te kerēme tāke hokohoko</span>
+                                                                </a>
+                                                        </section>
+                                                
+                                            </div>
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 ">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Employing staff </span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Te tuku mahi ki ngā kaimahi</span>
+                                                    </div>
+                                                        <a href="/employing-staff/register-as-an-employer" aria-label="Register as an employer">
+                                                            <span>Register as an employer</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te rēhita hei kaituku mahi</span>
+                                                        </a>
+                                                        <a href="/employing-staff/paying-staff" aria-label="Paying staff">
+                                                            <span>Paying staff</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Utu kaimahi</span>
+                                                        </a>
+                                                        <a href="/employing-staff/payday-filing" aria-label="Payday filing">
+                                                            <span>Payday filing</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tāpaetanga rā utu</span>
+                                                        </a>
+                                                        <a href="/employing-staff/deductions-from-income" aria-label="Deductions from income">
+                                                            <span>Deductions from income</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā tangohanga mai i ngā moni whiwhi</span>
+                                                        </a>
+                                                        <a href="/kiwisaver/kiwisaver-employers" aria-label="KiwiSaver for employers">
+                                                            <span>KiwiSaver for employers</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te KiwiSaver mō ngā kaituku mahi</span>
+                                                        </a>
+                                                </section>
+                                                        <section tabindex="-1" class="content">
+                                                            <div class="sub-menu-heading">
+                                                                <span>International</span>
+                                                                <span class="tereo" aria-hidden="true" lang="mi">Tāwāhi</span>
+                                                            </div>
+                                                                <a href="/international-tax/business" aria-label="International tax for business">
+                                                                    <span>International tax for business</span>
+                                                                    <span class="tereo" aria-hidden="true" lang="mi">Te tāke aowhānui mō ngā pakihi</span>
+                                                                </a>
+                                                        </section>
+                                                
+                                            </div>
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 col-bg-sub-menu">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Situations</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā āhuatanga</span>
+                                                    </div>
+                                                        <a href="/situations/i-am-starting-a-new-business" aria-label="I am starting a new business">
+                                                            <span>I am starting a new business</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Kei te tīmata au i tētahi pakihi hou</span>
+                                                        </a>
+                                                        <a href="/situations/i-am-going-to-employ-someone" aria-label="I am going to employ someone">
+                                                            <span>I am going to employ someone</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Kei te tuku mahi ahau ki tētahi tangata</span>
+                                                        </a>
+                                                        <a href="/situations/my-business-is-making-a-loss" aria-label="My business is making a loss">
+                                                            <span>My business is making a loss</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Kei te hapa taku pakihi</span>
+                                                        </a>
+                                                </section>
+                                                                                                    <div class="more-link-border">
+                                                        <a href="/situations" class="more-link" aria-label="More situations">More situations <i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+
+                                            </div>
+
+                                    </div>
+                                </div>
+                            <div class="megamenu-item col-xs-12 col-sm-4 col-md-4  menu-tab" data-index="2">
+                                <button type="button" class="megamenu-first-level" aria-expanded="false">
+                                    <div class="menu-item">
+                                        <span>Intermediaries and others</span>
+                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā takawaenga me ētahi atu</span>
+                                    </div>
+                                </button>
+                            </div>
+                                <div class="megamenu-sub-menu-content mega-menu-subitems-root-2" data-index="2">
+                                    <div class="row">
+
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 ">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Intermediaries</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā takawaenga</span>
+                                                    </div>
+                                                        <a href="/topics/intermediaries/becoming-an-intermediary" aria-label="Becoming an intermediary">
+                                                            <span>Becoming an intermediary</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tū hei takawaenga</span>
+                                                        </a>
+                                                        <a href="/topics/intermediaries/getting-authority-to-act" aria-label="Getting authority to act">
+                                                            <span>Getting authority to act</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te whiwhi whakamanatanga</span>
+                                                        </a>
+                                                        <a href="/managing-my-tax/getting-someone-to-act-on-my-behalf/executive-office-holders" aria-label="Executive office holders">
+                                                            <span>Executive office holders</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā kaipupuri tūnga whakahaere</span>
+                                                        </a>
+                                                        <a href="/topics/intermediaries/linking-client-accounts" aria-label="Linking client accounts">
+                                                            <span>Linking client accounts</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te honohono pūkete kiritaki</span>
+                                                        </a>
+                                                        <a href="/managing-my-tax/getting-someone-to-act-on-my-behalf/nominated-person" aria-label="Nominated person">
+                                                            <span>Nominated person</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tangata kua whakaingoatia</span>
+                                                        </a>
+                                                        <a href="/topics/intermediaries/tax-pooling" aria-label="Tax pooling">
+                                                            <span>Tax pooling</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te whakarōpū tāke</span>
+                                                        </a>
+                                                        <a href="/topics/intermediaries/gateway-services" aria-label="Gateway services">
+                                                            <span>Gateway services</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                </section>
+                                                                                                    <div class="more-link-border">
+                                                        <a href="/intermediaries-and-others" class="more-link" aria-label="More intermediaries and others">More intermediaries and others <i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+
+                                            </div>
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 ">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Tax agents</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā māngai tāke</span>
+                                                    </div>
+                                                        <a href="/about-us/publications/newsletters-bulletins/agents-answers" aria-label="Agents answers">
+                                                            <span>Agents answers</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā Whakautu Māngai</span>
+                                                        </a>
+                                                        <a href="/roles/tax-agents/tax-agent-status" aria-label="Tax agent status">
+                                                            <span>Tax agent status</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tūnga māngai tāke</span>
+                                                        </a>
+                                                        <a href="/topics/intermediaries/extension-of-time-arrangements" aria-label="Extension of time arrangements">
+                                                            <span>Extension of time arrangements</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te whakaroa i ngā whakaritenga wā</span>
+                                                        </a>
+                                                        <a href="/roles/tax-agents/managing-consolidated-groups" aria-label="Managing consolidated groups">
+                                                            <span>Managing consolidated groups</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te whakahaere rōpū tōpū</span>
+                                                        </a>
+                                                        <a href="/roles/tax-agents/individual-income-tax-for-clients-of-agents" aria-label="Income tax for individual clients of tax agents">
+                                                            <span>Income tax for individual clients of tax agents</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te tāke moni whiwhi mā ngā kiritaki takitahi a ngā takawaenga</span>
+                                                        </a>
+                                                        <a href="https://www.ird.govt.nz/index/news#sort=%40irscnewspubdate%20descending&amp;numberOfResults=25&amp;f:@computedz95xrole=[Tax%20agents]" aria-label="News updates for tax agents">
+                                                            <span>News updates for tax agents</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                </section>
+                                                                                                    <div class="more-link-border">
+                                                        <a href="/roles/tax-agents" class="more-link" aria-label="More tax agents">More tax agents <i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+
+                                            </div>
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 ">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Digital service providers</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā kaiwhakarato ratonga matihiko</span>
+                                                    </div>
+                                                        <a href="/digital-service-providers/guides-and-docs/getting-started" aria-label="Getting started">
+                                                            <span>Getting started</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                        <a href="/digital-service-providers/guides-and-docs/about-the-developer-portal" aria-label="About the gateway customer support and developer portals">
+                                                            <span>About the gateway customer support and developer portals</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi"></span>
+                                                        </a>
+                                                        <a href="/digital-service-providers/guides-and-docs/gws-architecture" aria-label="Gateway services architecture">
+                                                            <span>Gateway services architecture</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te hanganga ratonga tomokanga</span>
+                                                        </a>
+                                                        <a href="/digital-service-providers/services-catalogue" aria-label="Services catalogue">
+                                                            <span>Services catalogue</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Te putumōhio ratonga</span>
+                                                        </a>
+                                                </section>
+                                                                                                    <div class="more-link-border">
+                                                        <a href="/digital-service-providers" class="more-link" aria-label="More digital service providers">More digital service providers <i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+
+                                            </div>
+                                            <div class="col-sub-menu col-xs-12 col-sm-3 col-md-3 col-bg-sub-menu">
+                                                <section tabindex="-1" class="content">
+                                                    <div class="sub-menu-heading">
+                                                        <span>Roles</span>
+                                                        <span class="tereo" aria-hidden="true" lang="mi">Ngā tūranga</span>
+                                                    </div>
+                                                        <a href="/roles/tax-agents" aria-label="Tax agents">
+                                                            <span>Tax agents</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā māngai tāke</span>
+                                                        </a>
+                                                        <a href="/roles/bookkeepers" aria-label="Bookkeepers">
+                                                            <span>Bookkeepers</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā kaikaute</span>
+                                                        </a>
+                                                        <a href="/roles/paye-intermediaries" aria-label="PAYE intermediaries">
+                                                            <span>PAYE intermediaries</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā takawaenga PAYE</span>
+                                                        </a>
+                                                        <a href="/roles/payroll-bureaus" aria-label="Payroll bureaus">
+                                                            <span>Payroll bureaus</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ngā tari ripanga utu kaimahi</span>
+                                                        </a>
+                                                        <a href="/roles/other-representatives" aria-label="Other representatives">
+                                                            <span>Other representatives</span>
+                                                            <span class="tereo" aria-hidden="true" lang="mi">Ētahi atu māngai</span>
+                                                        </a>
+                                                </section>
+                                                
+                                            </div>
+
+                                    </div>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    </header>
+<!--End Header-->
+
+
+
+
+
+    <link href="/-/media/themes/ir/shared/favicon.png?modified=20210228002011" rel="shortcut icon" />
+
+
+<!--START BetaBanner-->
+<div class="component BetaBanner">
+    <div class="component-content">
+    </div>
+</div>
+<!--END BetaBanner-->        <div id="main-content-wrapper">
+            <div class="">
+                <!-- END NOINDEX -->
+
+
+
+    <section class="hero-image hero-image_coveo-search" style="background-image: url(/-/media/project/ir/home/graphics/banners/homepage/homepage-banner-background-v2.jpg?modified=20230321183509&amp;modified=20230321183509)">
+        <div class="container">
+            <div class="homepage-title">
+                <h1 class="tereo">
+                    Nau mai, haere mai
+                </h1>
+                <h1 class="english">
+                    Welcome to Inland Revenue
+                </h1>
+            </div>
+        </div>
+        <div class="tp-search">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="global-search-hero" class="tp-search__form">
+                            <div class="tp-search__wrapper">
+                                <div class="CoveoAnalytics" data-search-hub="Core-Search">
+                                </div>
+                                <div class="CoveoOmnibox" data-placeholder="Search ird.govt.nz" role="search"
+                                     data-query-suggest-character-threshold="0" data-number-of-suggestions="8">
+                                </div>
+                                        <div class="searchTips">
+                                            <a href="/about-this-site/search-tips" class="searchTips-link">Search Tips</a>
+                                        </div>
+                                <div class="CoveoSearchButton"></div>
+                                <div class="CoveoSearchHistory" data-number-of-queries="15"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+
+
+    <div class="hero-image__btns container">
+                <a class="button button--primary" href="/index/calculators-and-tools"> Calculators &amp; tools</a>
+                <a class="button button--primary" href="/index/all-forms-and-guides"> Forms &amp; guides</a>
+                <a class="button button--primary" href="/index/key-dates"> Key dates</a>
+    </div>
+
+    </section>
+
+
+<div class="coveo__searchbox--landing coveo__searchbox--mobile-only">
+    <div id="global-search-box-root-element" class="coveo__searchbox--landing" data-props-placeholder="Search Inland Revenue....; Search Inland Revenue..." data-props-placholder-text-count="2">
+        <div id="global-search" class="coveo__searchbox">
+            <div class="container">
+                <div class="col-xs-12">
+                    <div class="coveo__searchbox__wrapper row">
+                        <div class="search-icon"></div>
+                        <div class="CoveoOmnibox mobile-search"
+                             data-placeholder="Search"
+                             role="search"
+                             data-query-suggest-character-threshold="0"
+                             data-number-of-suggestions="8"
+                             data-inline="true"
+                             data-auto-focus="false">
+                        </div>
+                            <div class="searchTips mobile-search-tips background--grey">
+                                <a href="/about-this-site/search-tips" class="searchTips-link">Search Tips</a>
+                            </div>
+                        <div class="CoveoSearchButton"></div>
+                        <div class="CoveoSearchHistory" id="search-history"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="search-interface">
+        <div class="CoveoAnalytics" data-anonymous="true" data-auto-push-to-gtm-data-layer="true"></div>
+    </div>
+
+
+        <div class="path-tool--mobile">
+            <div class="row">
+                                        <div class="col-xs-12 path-tool--mobile__tab path-tool--mobile__extra-tools">
+<a href="/index/all-forms-and-guides" class="path-tool--mobile__tab-button" title="Forms and Guides" >                                <i class="fal fa-check-square icons"></i>
+                                <span>
+                                    Forms &amp; guides
+                                </span>
+</a>                        </div>
+                        <div class="col-xs-12 path-tool--mobile__tab path-tool--mobile__extra-tools">
+<a href="/index/calculators-and-tools" class="path-tool--mobile__tab-button" title="Calculators and Tools" >                                <i class="far fa-calculator icons"></i>
+                                <span>
+                                    Calculators &amp; tools
+                                </span>
+</a>                        </div>
+                        <div class="col-xs-12 path-tool--mobile__tab path-tool--mobile__extra-tools">
+<a href="/index/key-dates" class="path-tool--mobile__tab-button" title="Key dates" >                                <i class="fal fa-alarm-clock icons"></i>
+                                <span>
+                                    Key dates
+                                </span>
+</a>                        </div>
+            </div>
+        </div>
+
+<div class="homepage-combined homepage-combined--70-30">
+    <div class="container homepage-combined__wrapper">
+        <div class="homepage-combined__container">
+
+            
+<!--Start Promotional Banner Carousel-->
+
+
+    <div class="homepage-combined__column-wrapper">
+        <div class="promo-landing-banner">
+            <div class="carousel landing-page-banner">
+                            <div class="lazy-load--carousel" data-mobile-src="/-/media/project/ir/home/graphics/banners/personal-income-tax---budget-24/mobile---animated-hand---light-teal.png?modified=20240604213306&amp;modified=20240604213306" data-desktop-src="/-/media/project/ir/home/graphics/banners/personal-income-tax---budget-24/desktop---animated-hand---light-teal.png?modified=20240604213310&amp;modified=20240604213310" data-alt="Income tax threshold changes. Learn more. Hand holding gold coins.">
+                                    <a href="/pages/campaigns/personal-income-tax-threshold-changes" rel="noopener noreferrer" title="Income tax threshold changes. Learn more. Hand holding gold coins." target="_blank">
+                                            <picture>
+        <source class="lazy-load__mobile">
+        <source class="lazy-load__desktop">
+        <img class="lazy-load__ie">
+    </picture>
+
+                                    </a>
+
+                            </div>
+                            <div class="lazy-load--carousel" data-mobile-src="/-/media/project/ir/home/graphics/banners/familyboost/ird0124-ece-familyboost-web-banners-414x175.jpg?modified=20240604044331&amp;modified=20240604044331" data-desktop-src="/-/media/project/ir/home/graphics/banners/familyboost/ird0124-ece-familyboost-web-banners-1000x480.jpg?modified=20240604044318&amp;modified=20240604044318" data-alt="Image showing a child with box full of toys and the text FamilyBoost and Learn more">
+                                    <a href="/familyboost" rel="noopener noreferrer" title="Image showing a child with box full of toys and the text FamilyBoost and Learn more" target="_blank">
+                                            <picture>
+        <source class="lazy-load__mobile">
+        <source class="lazy-load__desktop">
+        <img class="lazy-load__ie">
+    </picture>
+
+                                    </a>
+
+                            </div>
+                            <div class="lazy-load--carousel" data-mobile-src="/-/media/project/ir/home/graphics/banners/7-july/7-july-2023-carousel-mobile.png?modified=20230509224020&amp;modified=20230509224020" data-desktop-src="/-/media/project/ir/home/graphics/banners/7-july/7-july-2023-carousel-desktop.png?modified=20230509224010&amp;modified=20230509224010" data-alt="Income tax returns due 7 July. Find out more">
+                                    <a href="/pages/campaigns/7-july" rel="noopener noreferrer" title="Income tax returns due 7 July. Find out more" target="_blank">
+                                            <picture>
+        <source class="lazy-load__mobile">
+        <source class="lazy-load__desktop">
+        <img class="lazy-load__ie">
+    </picture>
+
+                                    </a>
+
+                            </div>
+                            <div class="lazy-load--carousel" data-mobile-src="/-/media/project/ir/home/graphics/banners/end-of-tax-year/end-of-tax-year-24-mobile.jpg?modified=20240327040635&amp;modified=20240327040635" data-desktop-src="/-/media/project/ir/home/graphics/banners/end-of-tax-year/end-of-tax-year-24-desktop.jpg?modified=20240327040630&amp;modified=20240327040630" data-alt="Aotearoa end of tax year. Know what to do.">
+                                    <a href="/pages/campaigns/end-of-tax-year-know-what-to-do" rel="noopener noreferrer" title="Aotearoa end of tax year. Know what to do." target="_blank">
+                                            <picture>
+        <source class="lazy-load__mobile">
+        <source class="lazy-load__desktop">
+        <img class="lazy-load__ie">
+    </picture>
+
+                                    </a>
+
+                            </div>
+                            <div class="lazy-load--carousel" data-mobile-src="/-/media/project/ir/home/graphics/banners/beware-of-scams/ir_anti-scam-banner_mobile_1536x634px_v5.jpg?modified=20230301020448&amp;modified=20230301020448" data-desktop-src="/-/media/project/ir/home/graphics/banners/beware-of-scams/ir_anti-scam-banner_website_1640x786px_v5.jpg?modified=20230301020451&amp;modified=20230301020451" data-alt="Link to webpages to find out how to recognize a scam, learn about latest scams, and report a scam.">
+                                    <a href="/managing-my-tax/scams/signs-of-a-scam" rel="noopener noreferrer" title="Link to webpages to find out how to recognize a scam, learn about latest scams, and report a scam." target="_blank">
+                                            <picture>
+        <source class="lazy-load__mobile">
+        <source class="lazy-load__desktop">
+        <img class="lazy-load__ie">
+    </picture>
+
+                                    </a>
+
+                            </div>
+            </div>
+        </div>
+    </div>
+
+<!--End Promotional Banner Carousel-->
+
+            
+
+
+
+    <div class="homepage-combined__column-wrapper">
+        <section class="related-news right-sidebar__child-1 related-news related-news--combined">
+            <div class="related-news__header">
+                <h4 class="related-news__heading">
+                    Updates
+                </h4>
+            </div>
+            <ul class="related-news__list">
+                        <li class="related-news__item">
+                            <a class="related-news__title" href="https://www.ird.govt.nz/updates/news-folder/2024/1-july-changes-now-in-effect">
+                                1 July changes now in effect
+                            </a>
+                            <span class="related-news__date">
+                                01 July 2024
+                            </span>
+                            <div class="related-news__summary">
+                                1 July changes now in effect.
+                            </div>
+                        </li>
+                        <li class="related-news__item">
+                            <a class="related-news__title" href="https://www.ird.govt.nz/updates/news-folder/2024/familyboost-introduced-on-1-july-2024">
+                                FamilyBoost introduced on 1 July 2024
+                            </a>
+                            <span class="related-news__date">
+                                27 June 2024
+                            </span>
+                            <div class="related-news__summary">
+                                FamilyBoost is a childcare payment to help eligible households pay for the cost of early childhood education (ECE).
+                            </div>
+                        </li>
+                        <li class="related-news__item">
+                            <a class="related-news__title" href="https://www.ird.govt.nz/updates/news-folder/2024/new-zealands-offshore-gambling-duty">
+                                New Zealand&#39;s offshore gambling duty
+                            </a>
+                            <span class="related-news__date">
+                                27 June 2024
+                            </span>
+                            <div class="related-news__summary">
+                                The New Zealand Government is introducing a new gaming duty, offshore gambling duty. It comes into effect on 1 July 2024.
+                            </div>
+                        </li>
+            </ul>
+                <div class="related-news__links">
+
+<a href="/index/news" class="related-news__link related-news__all-updates related-news__all-updates--mobile" >All updates</a>
+                </div>
+        </section>
+    </div>
+<!--7/2/2024 5:48:33 AM-->
+
+
+        </div>
+    </div>
+</div>
+
+
+    <div class="js-featured-dates"
+         data-options='{"endpoint":"/api/content/getevents?date=2024-07-02-05-48-33"}'>
+    </div>
+
+
+        <div class="js-topics-nav--secondary" data-options='{&quot;allTopicsPage&quot;:&quot;/roles&quot;,&quot;allTopicsPageTitle&quot;:&quot;All types&quot;,&quot;items&quot;:[{&quot;title&quot;:&quot;Individuals &amp; families&quot;,&quot;iconUrl&quot;:null,&quot;moreLinks&quot;:{&quot;title&quot;:&quot;All roles&quot;,&quot;url&quot;:&quot;/roles&quot;},&quot;subitems&quot;:[{&quot;title&quot;:&quot;Approved issuer&quot;,&quot;url&quot;:&quot;/roles/approved-issuer&quot;},{&quot;title&quot;:&quot;Child or young person&quot;,&quot;url&quot;:&quot;/roles/child-or-young-person&quot;},{&quot;title&quot;:&quot;Employees&quot;,&quot;url&quot;:&quot;/roles/employees&quot;},{&quot;title&quot;:&quot;IR56 taxpayers&quot;,&quot;url&quot;:&quot;/roles/ir56-taxpayers&quot;},{&quot;title&quot;:&quot;New Zealand tax residents&quot;,&quot;url&quot;:&quot;/roles/nz-tax-residents&quot;},{&quot;title&quot;:&quot;Non-resident taxpayers&quot;,&quot;url&quot;:&quot;/roles/non-residents&quot;}]},{&quot;title&quot;:&quot;Business &amp; employers&quot;,&quot;iconUrl&quot;:null,&quot;moreLinks&quot;:{&quot;title&quot;:&quot;All roles&quot;,&quot;url&quot;:&quot;/roles&quot;},&quot;subitems&quot;:[{&quot;title&quot;:&quot;Companies&quot;,&quot;url&quot;:&quot;/roles/companies&quot;},{&quot;title&quot;:&quot;Employers&quot;,&quot;url&quot;:&quot;/roles/employers&quot;},{&quot;title&quot;:&quot;Look-through company&quot;,&quot;url&quot;:&quot;/roles/look-through-company&quot;},{&quot;title&quot;:&quot;Māori authorities&quot;,&quot;url&quot;:&quot;/roles/maori-authorities&quot;},{&quot;title&quot;:&quot;Mineral mining&quot;,&quot;url&quot;:&quot;/roles/mineral-mining&quot;},{&quot;title&quot;:&quot;Partnerships&quot;,&quot;url&quot;:&quot;/roles/partnerships&quot;},{&quot;title&quot;:&quot;Petroleum industry&quot;,&quot;url&quot;:&quot;/roles/petroleum-industry&quot;},{&quot;title&quot;:&quot;Portfolio investment entities&quot;,&quot;url&quot;:&quot;/roles/portfolio-investment-entities&quot;},{&quot;title&quot;:&quot;Qualifying company&quot;,&quot;url&quot;:&quot;/roles/qualifying-company&quot;},{&quot;title&quot;:&quot;Screen production industry&quot;,&quot;url&quot;:&quot;/roles/screen-production-industry&quot;},{&quot;title&quot;:&quot;Self-employed&quot;,&quot;url&quot;:&quot;/roles/self-employed&quot;},{&quot;title&quot;:&quot;Suppliers&quot;,&quot;url&quot;:&quot;/roles/suppliers&quot;},{&quot;title&quot;:&quot;Trusts and estates&quot;,&quot;url&quot;:&quot;/roles/trusts-and-estates&quot;},{&quot;title&quot;:&quot;Winemakers&quot;,&quot;url&quot;:&quot;/roles/winemakers&quot;}]},{&quot;title&quot;:&quot;Intermediaries&quot;,&quot;iconUrl&quot;:null,&quot;moreLinks&quot;:{&quot;title&quot;:&quot;All roles&quot;,&quot;url&quot;:&quot;/roles&quot;},&quot;subitems&quot;:[{&quot;title&quot;:&quot;Bookkeepers&quot;,&quot;url&quot;:&quot;/roles/bookkeepers&quot;},{&quot;title&quot;:&quot;Other representatives&quot;,&quot;url&quot;:&quot;/roles/other-representatives&quot;},{&quot;title&quot;:&quot;PAYE intermediaries&quot;,&quot;url&quot;:&quot;/roles/paye-intermediaries&quot;},{&quot;title&quot;:&quot;Payroll bureaus&quot;,&quot;url&quot;:&quot;/roles/payroll-bureaus&quot;},{&quot;title&quot;:&quot;Tax agents&quot;,&quot;url&quot;:&quot;/roles/tax-agents&quot;}]}]}' data-title=''></div>
+
+
+
+    <!--Start Situation Block-->
+    <div class="component">
+        <div class="situation-block">
+            <div class="grey-bg">
+                <div class="situation-block__container container">
+                    <div class="situation-block__left">
+                        <h4 class="situation-block__left-label">
+                            What if...
+                        </h4>
+                        <div class="situation-block__left-text">
+                                <a class="situation-block__left-link" href="/situations/i-received-an-income-tax-assessment">
+                                    <h3 class="situation-block__left-header">
+                                        I received an income tax assessment
+                                    </h3>
+                                </a>
+                                <h4 class="situation-block__left-subheader" aria-hidden="true">
+                                    I whiwhi i ahau tētahi aromatawai tāke moni whiwhi
+                                </h4>
+
+                        </div>
+
+<a href="/situations" class="button button--primary situation-block__left-button" >Find your situation</a>                    </div>
+                    <div class="situation-block__right">
+                        <h4 class="situation-block__right-header">
+                            More situations 
+                        </h4>
+
+                                <div class="situation-block__right-options">
+                                            <a class="options-item" href="/situations/i-am-self-employed-and-making-a-loss">I am self employed and making a loss</a>
+                                            <a class="options-item" href="/situations/coming-to-nz">I am coming to New Zealand</a>
+                                            <a class="options-item" href="/situations/my-income-changes-a-lot">My income changes a lot</a>
+                                </div>
+                        <a href="/situations" class="situation-block__right-link" >All situations</a>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Situation Block-->
+
+
+    <div class="media-card container padding-gutter media-card--home media-card--home-refresh">
+        <div class="media-card__header">
+                <h4 class="media-card__title">
+                    Media releases
+                </h4>
+        </div>
+        <div class="media-card__row">
+                <section class="media-card__item">
+                            <div class="media-card__img" style="background-image: url('-/media/project/ir/home/media-releases/standard-photos/family-hands.jpg?w=560&amp;sc_lang=en&amp;modified=20210628021107&amp;hash=AE23BD52BDC1AA33E1C64AE21BC7A228')"></div>
+                    <div class="media-card__meta">
+                            <span class="media-card__date">
+                                01 July 2024
+                            </span>
+                                                    <div class="media-card__tags">
+                                        <a href="/index/media-releases#f:@irsccoremediacategories=[Individuals]" tabindex="-1">Individuals</a>
+                            </div>
+                    </div>
+                    <a class="media-card__link" href="/media-releases/2024/start-collecting-ece-invoices">
+                        Start collecting ECE invoices
+                    </a>
+                        <div class="media-card__summary">
+                            <div>Parents should now start saving their Early Childhood Education (ECE) invoices to claim FamilyBoost later in the year.<br />
+<div>&nbsp;</div>
+</div>
+                        </div>
+                </section>
+                <section class="media-card__item">
+                            <div class="media-card__img" style="background-image: url('-/media/project/ir/home/media-releases/standard-photos/liquor-outlets-2024.jpg?w=560&amp;modified=20240618012209&amp;hash=FDD4D971E71AEDE4F406B181B3EF6CF7')"></div>
+                    <div class="media-card__meta">
+                            <span class="media-card__date">
+                                18 June 2024
+                            </span>
+                                            </div>
+                    <a class="media-card__link" href="/media-releases/2024/inland-revenue-focus-on-smaller-liquor-stores">
+                        Inland Revenue focus on smaller liquor stores
+                    </a>
+                        <div class="media-card__summary">
+                            Inland Revenue has released insights from its first round of a hidden economy campaign, focused on smaller liquor outlets around the country.
+                        </div>
+                </section>
+                <section class="media-card__item">
+                            <div class="media-card__img" style="background-image: url('-/media/project/ir/home/media-releases/standard-photos/scam-alert-2024.jpg?w=560&amp;modified=20240613234454&amp;hash=B4E03A39585A9F4FAEB10FF2A7617BAC')"></div>
+                    <div class="media-card__meta">
+                            <span class="media-card__date">
+                                14 June 2024
+                            </span>
+                                                    <div class="media-card__tags">
+                                        <a href="/index/media-releases#f:@irsccoremediacategories=[Individuals]" tabindex="-1">Individuals</a>
+                            </div>
+                    </div>
+                    <a class="media-card__link" href="/media-releases/2024/watch-out-for-scammers-this-2024-tax-season">
+                        Watch out for scammers this 2024 tax season
+                    </a>
+                        <div class="media-card__summary">
+                            <p style="background: white; margin: 0cm 0cm 18pt;"><span style="color: black;">The 2024 tax season is now in full swing with more than 2.7 million individual tax assessments sent out and more to come. </span></p>
+                        </div>
+                </section>
+        </div>
+<a Class="media-card__more-link--mobile" title="More media releases" href="/media-releases">All media releases</a>                    <div class="media-card__more-link--desktop-container">
+                <a Class="media-card__more-link--desktop" title="More media releases" href="/media-releases">All media releases</a>
+            </div>
+    </div>
+<!--Start PromotionalBanner wide-->
+    <div class="simple-component get-it-done-online">
+        <div class="container padding-gutter">
+                <div class="col-md-1 icon">
+                    <img src="/-/media/project/ir/common-images/picto-myir.svg?iar=0&amp;modified=20190304002253&amp;hash=DF0A17E63E8104762616156FB29E1D92" alt="myIR" Class="my-ir" />
+                </div>
+
+            <div class="col-md-6 description">
+                    <h1>
+                        Get it done online
+                    </h1>
+                                    <p>
+                        You can easily see payments, change your details, and manage tax and other services using myIR
+                    </p>
+
+            </div>
+            <div class="col-md-5">
+                <div class="row">
+                        <div class="col-md-6">
+                                <a href="https://myir.ird.govt.nz" class="btn btn-white">
+                                    <i class="fal fa-lock-alt"></i>&nbsp;&nbsp; myIR
+                                </a>
+                        </div>
+
+
+                        <div class="col-md-6 pr-0">
+                            <a Class="btn btn-green" target="_blank" rel="noopener noreferrer" href="https://myir.ird.govt.nz/tools/?LINK=NEWLOGUNA">Register</a>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<!--End PromotionalBanner wide -->                                                    <div>
+                        <div class="container">
+                            
+                            
+
+
+<div class="component container" id="main-content">
+    <div class="component-content" >
+    </div>
+</div>
+                        </div>
+                    </div>
+
+                <div class="container">
+                    
+                </div>
+                
+            </div>
+        </div>
+     <!-- BEGIN NOINDEX -->
+     
+
+
+<script>
+    window.LANGUAGE_CONFIG = {
+        languages: [
+
+                {
+                    name: "English",
+                    active: true,
+                    introductionMessage: "<p>We've created quick-help sections in other languages to make it easier to find what you need.</p><p>You can always get to them by using this language button at the top or bottom of our web pages.</p>",
+                    closeButtonLabel: "Home"
+                },
+            
+                {
+                    name:"Te Reo Māori",
+                    active: false,
+                    introductionMessage: "<p>Kua waihangatia e mātou tētahi wāhanga āwhina kia māmā ake ai te rapu i nga mea.</p><p>Whakamahi i te pātene reo i tō mātou whārangi paetukutuku. </p>",
+                    closeButtonLabel: "English",
+                    landingPage: {
+                        buttonLabel: "Wāhanga Māori ",
+                        link: "/maori"
+                    }
+                },
+            
+                {
+                    name:"简体中文",
+                    active: false,
+                    introductionMessage: "<p>我们提供了简体中文版本网页内容, 为您快速了解有关信息提供帮助。</p><p>只要使用位于网页顶端或底端的语言按键, 您即可以进入这些网页。</p>",
+                    closeButtonLabel: "English",
+                    landingPage: {
+                        buttonLabel:"简体中文版本内容",
+                        link: "/simplified-chinese"
+                    }
+                },
+                    ]
+    };
+</script>
+<div class="language-select__root">
+</div>    <footer class="global-footer footer-refresh">
+        <div class="footer-refresh__container">
+            <div>
+                <a class="ird-logo footer-refresh__logo" href="/">
+                    <img alt="Inland Revenue"
+                         class="footer-refresh__logo-image"
+                         src="-/media/9a650f97e75446628f3b66200257d466.ashx" />
+                    <img alt="Inland Revenue"
+                         class="footer-refresh__logo-image-print"
+                         src="-/media/b3470eab672843cf9009147e89372460.ashx" />
+                </a>
+            </div>
+            <div class="footer-refresh-information__container">
+                <div>
+                        <h3 class="footer-refresh__title">FOLLOW US</h3>
+                        <ul class="footer-refresh-content__container">
+                                    <li class="footer-refresh-socials__item">
+<a href="https://www.facebook.com/IRDNZ/?id=footer" class="footer-refresh__item-link" target="_blank" rel="noopener noreferrer" >                                            <span class="footer-refresh__item-text follow-us__Item-text" aria-label="Follow us on Facebook">
+                                                <i class="fab fa-facebook-f follow-logo" aria-hidden="true"></i>Facebook
+                                            </span>
+</a>                                    </li>
+                                    <li class="footer-refresh-socials__item">
+<a href="https://www.youtube.com/user/InlandRevenueNZ?id=footer" class="footer-refresh__item-link" target="_blank" rel="noopener noreferrer" >                                            <span class="footer-refresh__item-text follow-us__Item-text" aria-label="Follow us on YouTube">
+                                                <i class="fab fa-youtube follow-logo" aria-hidden="true"></i>Youtube
+                                            </span>
+</a>                                    </li>
+                                    <li class="footer-refresh-socials__item">
+<a href="https://www.linkedin.com/company/inland-revenue-nz/?id=footer" class="footer-refresh__item-link" target="_blank" rel="noopener noreferrer" >                                            <span class="footer-refresh__item-text follow-us__Item-text" aria-label="Follow us on Linkedin">
+                                                <i class="fab fa-linkedin-in follow-logo" aria-hidden="true"></i>LinkedIn
+                                            </span>
+</a>                                    </li>
+                                    <li class="footer-refresh-socials__item">
+<a href="/subscription-service" class="footer-refresh__item-link" >                                            <span class="footer-refresh__item-text follow-us__Item-text" aria-label="Subscribe to our Newsletters">
+                                                <i class="fas fa-envelope follow-logo" aria-hidden="true"></i>Subscribe
+                                            </span>
+</a>                                    </li>
+                        </ul>
+                </div>
+
+
+        <div class="footer-refresh-content__container">
+            <h3 class="footer-refresh__title">CONTACT US</h3>
+            <ul>
+                <li class="footer-refresh-contact__item"></li>
+                                <li class="footer-refresh-dropdown__item footer-refresh-contact__item">
+                                                <a class="dropdown-link header-refresh__nav-item" tabindex="0" data-menu-id=footer-contact-information-menu-1>
+                <span class="dropdown-link__label">Contact Information</span>
+            </a>
+            <ul id=footer-contact-information-menu-1 class="dropdown-nav">
+
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/contactus">Contact us</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link " rel="" target="" href="/media-releases/media">Media queries</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link external" rel="noopener noreferrer" target="_blank" href="https://www.taxpolicy.ird.govt.nz/contacting-us">Tax Policy enquiries</a>
+                    </li>
+                    <li class="dropdown-nav__item">
+                        <a class="dropdown-nav__link external" rel="noopener noreferrer" target="_blank" href="https://www.taxtechnical.ird.govt.nz/contact-tax-technical">Tax Technical enquiries</a>
+                    </li>
+            </ul>
+
+                                </li>
+                                <li class="footer-refresh-contact__item">
+                                    <a href="/about-us" rel="" target="" class="footer-refresh__item-link ">
+                                        <span class="footer-refresh__item-text">About us</span>
+                                    </a>
+                                </li>
+                                <li class="footer-refresh-contact__item">
+                                    <a href="/about-us/careers" rel="" target="" class="footer-refresh__item-link ">
+                                        <span class="footer-refresh__item-text">Careers</span>
+                                    </a>
+                                </li>
+                                <li class="footer-refresh-contact__item">
+                                    <a href="/international-tax" rel="" target="" class="footer-refresh__item-link ">
+                                        <span class="footer-refresh__item-text">International</span>
+                                    </a>
+                                </li>
+
+            </ul>
+        </div>
+
+
+
+                <div class="share-content__desktop">
+                    <div class="footer-refresh-content__container">
+                            <h3 class="footer-refresh__title">SHARE THIS PAGE</h3>
+                            <ul class="footer-refresh__share-content">
+                                        <li class="footer-refresh-contact__item">
+                                                <a class=" footer-refresh__item-link" data-link="mailto:?subject={0}&amp;body={1}" rel="" target="" href="#">
+                                                    <span class="footer-refresh__item-text" aria-label="Email this page">
+                                                        <i class="fal fa-envelope-open share-logo" aria-hidden="true"></i>Email this page
+                                                    </span>
+                                                </a>
+
+                                        </li>
+                                        <li class="footer-refresh-contact__item">
+                                                <a class="share-content__item--linkedin footer-refresh__item-link" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;title={0}&amp;url={1}" rel="noopener noreferrer" target="_blank" href="#">
+                                                    <span class="footer-refresh__item-text" aria-label="Share this page on Linkedin">
+                                                        <i class="fab fa-linkedin share-logo" aria-hidden="true"></i>Linkedin
+                                                    </span>
+                                                </a>
+
+                                        </li>
+                                        <li class="footer-refresh-contact__item">
+                                                <a class="share-content__item--facebook footer-refresh__item-link" data-link="http://www.facebook.com/sharer.php?s=100&amp;p[title]={0}&amp;p[url]={1}" rel="noopener noreferrer" target="_blank" href="#">
+                                                    <span class="footer-refresh__item-text" aria-label="Share this page on Facebook">
+                                                        <i class="fab fa-facebook-square share-logo" aria-hidden="true"></i>Facebook
+                                                    </span>
+                                                </a>
+
+                                        </li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="share-content__mobile-screen">
+            <div class="footer-refresh-content__container ">
+                    <h3 class="footer-refresh__title footer-refresh__title-share">
+                        SHARE THIS PAGE
+                    </h3>
+                    <ul class="footer-refresh__share-content container--border-left">
+
+                                <li class="footer-refresh-contact__item">
+                                        <a class=" footer-refresh__item-link" data-link="mailto:?subject={0}&amp;body={1}" rel="" target="" href="#">
+                                            <span class="footer-refresh__item-text--hidden" aria-label="Email this page">
+                                                <i class="fal fa-envelope-open share-logo" aria-hidden="true"></i>
+                                            </span>
+                                        </a>
+
+                                </li>
+                                <li class="footer-refresh-contact__item">
+                                        <a class="share-content__item--linkedin footer-refresh__item-link" data-link="https://www.linkedin.com/shareArticle?mini=true&amp;title={0}&amp;url={1}" rel="noopener noreferrer" target="_blank" href="#">
+                                            <span class="footer-refresh__item-text--hidden" aria-label="Share this page on Linkedin">
+                                                <i class="fab fa-linkedin share-logo" aria-hidden="true"></i>
+                                            </span>
+                                        </a>
+
+                                </li>
+                                <li class="footer-refresh-contact__item">
+                                        <a class="share-content__item--facebook footer-refresh__item-link" data-link="http://www.facebook.com/sharer.php?s=100&amp;p[title]={0}&amp;p[url]={1}" rel="noopener noreferrer" target="_blank" href="#">
+                                            <span class="footer-refresh__item-text--hidden" aria-label="Share this page on Facebook">
+                                                <i class="fab fa-facebook-square share-logo" aria-hidden="true"></i>
+                                            </span>
+                                        </a>
+
+                                </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="row footer-refresh-bottom__background">
+            <div class="footer-refresh-bottom__container">
+                <div class="footer-refresh--bottom-links__container">
+                    <ul class="footer-refresh-bottom-links__list">
+
+                                <li class="links__list-item">
+<a href="/about-this-site" class="links__list-item-link" >About the site</a>                                </li>
+                                <li class="links__list-item">
+<a href="/about-this-site/conditions-of-use" class="links__list-item-link" >Conditions of use</a>                                </li>
+                                <li class="links__list-item">
+<a href="/about-this-site/your-privacy" class="links__list-item-link" >Privacy</a>                                </li>
+                                <li class="links__list-item">
+<a href="/glossary-source" class="links__list-item-link" >Glossary</a>                                </li>
+                                <li class="links__list-item">
+<a href="/about-this-site/accessibility" class="links__list-item-link" >Accessibility</a>                                </li>
+                                <li class="links__list-item">
+<a href="/about-this-site/conditions-of-use/copyright" class="links__list-item-link" >Copyright</a>                                </li>
+                                <li class="links__list-item">
+<a href="/topics/myir-secure-online-services" class="links__list-item-link" >MyIR Help</a>                                </li>
+                    </ul>
+                        <a class="links__list-item--copyright" href="/about-this-site/conditions-of-use/copyright" tabindex="0">
+                            <span>&#169; Copyright 2024 Inland Revenue</span>
+                        </a>
+                </div>
+                <div class="links-govt__container">
+                    <a class="links-govt-link" href="https://www.govt.nz/">
+                        <img class="links-govt-logo"
+                             src="-/media/47404b28b50b4b7296dd3fc594eab5b7.ashx"
+                             alt="New Zealand Government"
+                             height="60"
+                             width="264" />
+                    </a>
+                </div>
+
+                <div class="links-shielded__container">
+                    <a href="#" id="shielded-desktop">
+                        <img class="links-shielded-logo"
+                             src="-/media/bea477e465ab4e77a8c0a604941e44d1.ashx"
+                             alt="Shielded website"
+                             width="50"
+                             height="50" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+<div class="component plain-html">
+    <div class="component-content">
+    </div>
+</div>
+     <!-- END NOINDEX -->
+
+    <script src="/assets/home/js/jquery.min.js?v=0.1906.0-sc10release&cms=130.2"></script>
+    <script src="/assets/home/js/jquery.matchheight-min.js?v=0.1906.0-sc10release&cms=130.2"></script>
+    <script src="/assets/home/js/main.js?v=0.1906.0-sc10release&cms=130.2"></script>
+    <script src="/assets/home/js/react.js?v=0.1906.0-sc10release&cms=130.2" type="text/javascript"></script>
+    <script type="text/javascript" src="/assets/home/js/coveo.js?v=0.1906.0-sc10release&cms=130.2"></script>
+</body>
+</html>
